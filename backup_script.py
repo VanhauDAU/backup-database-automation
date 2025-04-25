@@ -62,7 +62,7 @@ def backup_database():
         send_email("Backup thất bại", str(e))
 
 # Schedule chạy lúc 00:00 mỗi ngày
-schedule.every().day.at("21:19").do(backup_database)  
+schedule.every().day.at("00:00").do(backup_database)  
 
 print("Chương trình đang chạy và sẽ tự động backup lúc 00:00 mỗi ngày...")
 
